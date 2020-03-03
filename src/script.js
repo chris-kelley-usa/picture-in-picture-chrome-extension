@@ -12,6 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+function updateVideo( ) {
+  var canvas = document.getElementById( 'canvas' );
+  var ctx = canvas.getContext( '2d' );
+  var myVideo = document.getElementById( 'video' );
+  ctx.drawImage( myVideo, (canvas.width / 2 - image.width / 2),
+      (canvas.height / 2 - image.height / 2 ));
+};
+
+updateVideo();
+
 (async () => {
   const videos = Array.from(document.querySelectorAll('video'))
     .filter(video => video.readyState != 0)
